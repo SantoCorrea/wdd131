@@ -10,6 +10,7 @@
 .nav-menu a {
     text-decoration: none;
     color: rgb(255, 255, 255);
+    padding: 125px;
 }
 
 .nav-menu ul {
