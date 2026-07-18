@@ -1,0 +1,133 @@
+@media (max-width: 799px) {
+   :root {
+    --font-family: 'Roboto', sans-serif;
+    --primary-color: #fe2020;
+    --secondary-color: #ff7d66;
+    --text-color: #fff;
+   }
+
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+   }
+
+   .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        height: auto;
+    }
+
+    .hero picture {
+        width: 100%;
+        height: auto;
+    }
+
+    .general-info,
+    .weather-info {
+        margin-bottom: 0.5rem;
+        position: static;
+        height: 100%;
+    }
+
+   /*################## HEADER CSS ##################*/
+
+   header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 0.3rem;
+   }
+
+    /*################## GENERAL INFO CLASS CSS ##################*/
+
+    .general-info {
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden; 
+    }
+
+    .general-info h2 {
+        background-color: var(--primary-color);
+        color: var(--text-color);
+        margin: 0;
+        padding: 0.5rem;
+    }
+
+    .general-info ul {
+        list-style: none;
+        margin: 0;
+        padding: 0.5rem 1rem;
+    }
+
+    .general-info li {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 0;
+        border-bottom: 1px dotted var(--primary-color);
+    }
+
+    .general-info li:last-child {
+        border-bottom: none;
+    }
+
+    .general-info .label {
+        font-weight: bold;
+    }
+
+    /*----- WEATHER INFO CSS -----*/
+
+    .weather-info {
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden;
+    }
+
+    .weather-info h2 {
+        background-color: var(--primary-color);
+        color: var(--text-color);
+        margin: 0;
+        padding: 0.5rem;
+    }
+
+    .weather-info table {
+        width: 100%;
+        border-collapse: collapse;
+        padding: 0.5rem 1rem;
+    }
+
+    .weather-info tr {
+        border-bottom: 1px dotted var(--primary-color);
+    }
+
+    .weather-info tr:last-child {
+        border-bottom: none;
+    }
+
+    .weather-info td {
+        padding: 0.5rem 1rem;
+    }
+
+    .weather-info td:first-child {
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .weather-info td:last-child {
+        text-align: right;
+    }
+
+    /*########## FOOTER CSS ###################*/
+
+    footer {
+        background-color: var(--primary-color);
+        color: var(--text-color);
+        text-align: center;
+        padding: 0.3rem;
+    }
+
+}

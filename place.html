@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="week 3 activity about the country Rome">
+    <meta name="author" content="Gabriel Guilherme Dos Santos Corrêa">
+    <link rel="stylesheet" href="styles/place-website/place.css">
+    <link rel="stylesheet" href="styles/place-website/place-mobile.css">
+    <script src="scripts/place.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Pixel&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Rome</title>
+</head>
+
+<body>
+    <header class="my-header">
+        <h1>Rome</h1>
+    </header>
+    
+    <main>
+    <div class="hero">
+        <picture>
+            <source media="(min-width: 800px)" srcset="images/rome-site/rome-large.webp">
+            <img src="images/rome-site/rome-mobile.webp" alt="Rome cityscape">
+        </picture>
+
+        <div class="general-info">
+            <h2>Data</h2>
+            <ul>
+                <li><span class="label">Capital:</span> <span class="value">Rome</span></li>
+                <li><span class="label">Population:</span> <span class="value">2,873,000</span></li>
+                <li><span class="label">Area:</span> <span class="value">1,285 km²</span></li>
+                <li><span class="label">Language:</span> <span class="value">Italian</span></li>
+                <li><span class="label">Currency:</span> <span class="value">Euro</span></li>
+                <li><span class="label">Time zone:</span> <span class="value">UTC+1</span></li>
+                <li><span class="label">Calling code:</span> <span class="value">+39</span></li>
+                <li><span class="label">Internet TLD:</span> <span class="value">.it</span></li>
+            </ul>
+        </div>
+
+        <div class="weather-info">
+            <h2>Weather</h2>
+            <table>
+                <tbody>
+                    <tr><td>Temperature</td><td id="temperature"></td></tr>
+                    <tr><td>Conditions</td><td id="conditions"></td></tr>
+                    <tr><td>Wind</td><td id="wind"></td></tr>
+                    <tr><td>Wind Chill</td><td id="windchill"></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Gabriel Guilherme Dos Santos Corrêa</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>

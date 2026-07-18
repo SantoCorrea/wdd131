@@ -1,0 +1,156 @@
+/*############## GENERAL CSS ##################*/
+
+:root {
+    --font-family: 'Roboto', sans-serif;
+    --primary-color: #fe2020;
+    --secondary-color: #ff7d66;
+    --text-color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+/*################# HEADER CSS ##################*/
+
+header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 0.3rem;
+}
+
+/*################## HERO IMG CSS ##################*/
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 7rem);
+    width: 100%;
+}
+
+.hero picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 80vh;
+}
+
+.hero img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/*################## GENERAL INFO CLASS CSS ##################*/
+
+.general-info,
+.weather-info {
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.general-info h2,
+.weather-info h2 {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0.5rem;
+}
+
+.general-info ul {
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 1rem;
+}
+
+.general-info li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px dotted var(--primary-color);
+}
+
+.general-info li:last-child {
+    border-bottom: none;
+}
+
+.general-info .label {
+    font-weight: bold;
+}
+
+/*----- WEATHER INFO CSS -----*/
+
+.weather-info table {
+    width: 100%;
+    border-collapse: collapse;
+    padding: 0.5rem 1rem;
+}
+
+.weather-info tr {
+    border-bottom: 1px dotted var(--primary-color);
+}
+
+.weather-info tr:last-child {
+    border-bottom: none;
+}
+
+.weather-info td {
+    padding: 0.5rem 1rem;
+}
+
+.weather-info td:first-child {
+    text-align: left;
+    font-weight: bold;
+}
+
+.weather-info td:last-child {
+    text-align: right;
+}
+
+/*########## FOOTER CSS ###################*/
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 0.3rem;
+}
+
+/*################## DESKTOP ONLY ##################*/
+
+@media (min-width: 800px) {
+    .hero {
+        position: relative;
+    }
+
+    .general-info,
+    .weather-info {
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.9);
+        font-size: 0.8rem;
+        width: 220px;
+        z-index: 2;
+        margin-bottom: 0; 
+    }
+
+    .general-info {
+        top: 1rem;
+        left: 1rem;
+    }
+
+    .weather-info {
+        top: 1rem;
+        right: 1rem;
+    }
+}
