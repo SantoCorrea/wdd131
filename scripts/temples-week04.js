@@ -104,7 +104,7 @@ const heading = document.querySelector("main h2");
 const navLinks = document.querySelectorAll(".nav-menu a");
 
 function displayTemples(templeArray, title) {
-    // Limpa o grid antes de renderizar
+    
     figGrid.innerHTML = "";
     heading.textContent = title;
 
@@ -132,7 +132,7 @@ function displayTemples(templeArray, title) {
 
 /*##################### FILTER FUNCTIONS ################## */
 function getYear(dateString) {
-    // dateString formato: "2005, August, 7"
+    
     return parseInt(dateString.split(",")[0].trim());
 }
 
@@ -165,7 +165,7 @@ navLinks.forEach((link) => {
             displayTemples(filtered, title);
         }
 
-        // Fecha o menu no mobile depois de clicar
+        
         navMenu.classList.remove("open");
         menuButton.classList.remove("open");
     });
