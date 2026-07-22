@@ -1,0 +1,79 @@
+:root {
+    --primary-color : darkred;
+    --font-color: white;
+    --font-family:  "Roboto", sans-serif;
+}
+
+/*############## HEADER CSS ################*/
+
+header {
+    background-color: var(--primary-color);
+    color: var(--font-color);
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    font-size: larger;
+    color: var(--font-color);
+}
+
+
+a:hover {
+    text-decoration: underline;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.3rem;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: var(--font-family);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/*################ MAIN CSS #############*/
+
+h2 {
+    text-align: center;
+}
+
+div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.fig-grid img {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    object-fit: cover;
+}
+
+/*################# FOOTER CSS ###################*/
+
+footer {
+    justify-content: center;
+    text-align: center;
+    background-color: var(--primary-color);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: var(--font-color);
+}
