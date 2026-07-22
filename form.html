@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Review Form | WDD 131</title>
+  <meta name="description" content="Submit a review for a purchased product, including a star rating, installation date, and useful features." />
+  <meta name="author" content="Gabriel" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/review.css" />
+  <script src="scripts/form.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="clip" aria-hidden="true"></div>
+    <h1>Field Report</h1>
+    <p class="tagline">A quick form for logging how a product performed after install</p>
+  </header>
+
+  <main>
+    <form id="review-form" action="review.html" method="get">
+
+      <fieldset class="field-block">
+        <legend>What did you install?</legend>
+        <label for="product">Product name</label>
+        <select id="product" name="product" required>
+          <option value="" disabled selected>Select a Product ...</option>
+        </select>
+      </fieldset>
+
+      <fieldset class="field-block rating-block">
+        <legend>Overall rating</legend>
+        <div class="rating-scale" role="group" aria-label="Overall rating, 1 to 5 stars">
+          <div class="rating-option">
+            <input type="radio" id="rating-1" name="rating" value="1" required />
+            <label for="rating-1">1<span class="sr-only"> star</span></label>
+          </div>
+          <div class="rating-option">
+            <input type="radio" id="rating-2" name="rating" value="2" />
+            <label for="rating-2">2<span class="sr-only"> stars</span></label>
+          </div>
+          <div class="rating-option">
+            <input type="radio" id="rating-3" name="rating" value="3" />
+            <label for="rating-3">3<span class="sr-only"> stars</span></label>
+          </div>
+          <div class="rating-option">
+            <input type="radio" id="rating-4" name="rating" value="4" />
+            <label for="rating-4">4<span class="sr-only"> stars</span></label>
+          </div>
+          <div class="rating-option">
+            <input type="radio" id="rating-5" name="rating" value="5" />
+            <label for="rating-5">5<span class="sr-only"> stars</span></label>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="field-block">
+        <legend>Installation</legend>
+        <label for="install-date">Date of installation</label>
+        <input type="date" id="install-date" name="installDate" required />
+      </fieldset>
+
+      <fieldset class="field-block">
+        <legend>Which features did you find useful? <span class="hint">(check all that apply)</span></legend>
+        <div class="checkbox-grid">
+          <div class="checkbox-option">
+            <input type="checkbox" id="feature-durability" name="features" value="durability" />
+            <label for="feature-durability">Durability</label>
+          </div>
+          <div class="checkbox-option">
+            <input type="checkbox" id="feature-ease" name="features" value="ease of use" />
+            <label for="feature-ease">Ease of use</label>
+          </div>
+          <div class="checkbox-option">
+            <input type="checkbox" id="feature-performance" name="features" value="performance" />
+            <label for="feature-performance">Performance</label>
+          </div>
+          <div class="checkbox-option">
+            <input type="checkbox" id="feature-design" name="features" value="design" />
+            <label for="feature-design">Design</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="field-block">
+        <label for="written-review">Written review <span class="hint">(optional)</span></label>
+        <textarea id="written-review" name="writtenReview" rows="5" placeholder="What worked, what didn't, would you buy it again?"></textarea>
+      </fieldset>
+
+      <fieldset class="field-block">
+        <label for="user-name">Your name <span class="hint">(optional)</span></label>
+        <input type="text" id="user-name" name="userName" placeholder="First name is fine" />
+      </fieldset>
+
+      <input type="submit" id="submit-review" value="Post Review" />
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Gabriel</p>
+    <p>Santarém, Pará, Brazil</p>
+    <p>Last Modification: <span id="last-modified"></span></p>
+  </footer>
+</body>
+</html>
